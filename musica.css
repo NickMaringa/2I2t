@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(231, 231, 129)
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.menu{
+    width: 100%;
+    background-color: rgb(153, 153, 232);
+    position: sticky;
+    top: 0;
+    font-size: 48px;
+}
+.logo {
+    display: inli;
+    font-size: 32px;ne-block;
+    color: violet;
+#logo {
+    height: 15vh;
+}
+.nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(84, 84, 204);
+    overflow: hidden;
+}
+.nav a {
+    display: block;
+    padding: 30px;
+    color: rgb(209, 240, 255);
+}
+.nav a:hover {
+    background-color: rgb(73, 194, 255);
+}
+.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+.hamburger {
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}
+.hamb-line {
+    background-color: rgb(209, 240, 255);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after{
+    background-color: rgb(209, 240, 255);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+.side-menu {
+    display: none;
+}
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamburger .hamb-line{
+    background: transparent;
+}
+.side-menu:checked ~ .hamburger .hamb-line::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.side-menu:checked ~ .hamburger .hamb-line::after{
+    transform: rotate(45deg);
+    top: 0;
+}
+.conteudo-musica{
+    width: 100vw;
+}
+.rodape{
+    width: 100%;
+    background-color: rgb(52, 171, 207);
+    text-align: center;
+}
+.definicao{
+    display: flex;
+    width: 100vw;
+    grid-area: def;
+}
+.img-definicao{
+    display: none;
+}
+.descricao{
+    width: 100vw;
+}
+div
+
+
+.conceito{
+    width: 100%;
+    background-color: blueviolet;
+}
+.artistas{
+    width: 100%;
+    background-color:rgb(30, 184, 30);
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.img-ini{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 600px){
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li {
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color:rgb(80, 80, 224);
+    }
+    .hamb{
+        display: none;
+    }
+    #logo {
+        width: 16vh;
+        height: 16vh;
+    }
+    .conteudo-musica{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-columns: "def def";
+    }
+    .definicao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .descricao{
+        display: block;
+        width: 80vw;
+    }
+    .img-definicao{
+        display: block;
+        width: 10vw;
+    }
+}
+
+@media screen and (min-width: 1228px){
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li {
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: rgb(146, 48, 146)
+    }
+    .hamb{
+        display: none;
+    }
+    #logo {
+        width: 16vh;
+        height: 16vh;
+    }
+    .conteudo-musica{
+        display: grid;
+        grid-template-columns: 33.3% 33.4% 33.3%;
+        grid-template-columns: "def def def";
+    }
+}
